@@ -8,7 +8,7 @@ module.exports = async (kernel) => {
         venv: "env",
         env: { },
         message: [
-          "flask --app gligen_gui:create_app(8188) run --port 5000"
+          kernel.platform === 'win32' ?  "flask --app gligen_gui:create_app(8188) run --port 5000" : "flask --app 'gligen_gui:create_app(8188)' run --port 5000"
         ],
         on: [{ "event": "/http:\/\/[0-9.:]+/", "done": true }]
       }
