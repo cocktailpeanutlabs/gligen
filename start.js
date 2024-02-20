@@ -2,13 +2,26 @@ module.exports = async (kernel) => {
   let script = {
     daemon: true,
     run: [{
+      method: "modal",
+      params: {
+        title: "ComfyUI",
+        description: 'Gligen depends on ComfyUI. Make sure to launch ComfyUI before proceeding.',
+        menu: [{
+          text: "Open ComfyUI",
+          href: '/pinokio/browser?uri=https://github.com/cocktailpeanutlabs/comfyui.git',
+        }, {
+          text: "Install ComfyUI",
+          href: 'https://pinokio.computer/item?uri=https://github.com/cocktailpeanutlabs/comfyui',
+        }]
+      }
+    }, {
       method: "shell.run",
       params: {
         path: "app",
         venv: "env",
         env: { },
         message: [
-          kernel.platform === 'win32' ?  "flask --app gligen_gui:create_app(8188) run --port 5000" : "flask --app 'gligen_gui:create_app(8188)' run --port 5000"
+          kernel.platform === 'win32' ?  "flask --app gligen_gui:create_app(8188) run" : "flask --app 'gligen_gui:create_app(8188)' run"
         ],
         on: [{ "event": "/http:\/\/[0-9.:]+/", "done": true }]
       }

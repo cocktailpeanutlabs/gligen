@@ -1,8 +1,8 @@
 const path = require('path')
 module.exports = {
-  version: "1.1",
+  version: "1.2",
   title: "gligen",
-  description: "",
+  description: "An intuitive GUI for GLIGEN that uses ComfyUI in the backend https://github.com/mut-ex/gligen-gui",
   icon: "icon.png",
   menu: async (kernel) => {
     let installing = await kernel.running(__dirname, "install.js")
