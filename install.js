@@ -3,6 +3,19 @@ const pre = require("./pre.js")
 module.exports = async (kernel) => {
   let script = {
     run: [{
+      method: "modal",
+      params: {
+        title: "ComfyUI",
+        description: 'Gligen depends on ComfyUI. Make sure to launch ComfyUI before proceeding.',
+        menu: [{
+          text: "Open ComfyUI",
+          href: '/pinokio/browser?uri=https://github.com/cocktailpeanutlabs/comfyui.git',
+        }, {
+          text: "Install ComfyUI",
+          href: 'https://pinokio.computer/item?uri=https://github.com/cocktailpeanutlabs/comfyui',
+        }]
+      }
+    }, {
       method: "shell.run",
       params: {
         message: [
