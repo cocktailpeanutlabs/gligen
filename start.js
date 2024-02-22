@@ -2,16 +2,15 @@ module.exports = async (kernel) => {
   let script = {
     daemon: true,
     run: [{
-      method: "modal",
+      method: "process.wait",
       params: {
-        title: "ComfyUI",
-        description: 'Gligen depends on ComfyUI. Make sure to launch ComfyUI before proceeding.',
+        message: 'Gligen depends on ComfyUI. Make sure to launch ComfyUI before proceeding.',
         menu: [{
           text: "Open ComfyUI",
           href: '/pinokio/browser?uri=https://github.com/cocktailpeanutlabs/comfyui.git',
         }, {
           text: "Install ComfyUI",
-          href: 'https://pinokio.computer/item?uri=https://github.com/cocktailpeanutlabs/comfyui',
+          href: 'https://pinokio.computer/i?uri=https://github.com/cocktailpeanutlabs/comfyui',
         }]
       }
     }, {
