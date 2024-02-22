@@ -12,7 +12,7 @@ module.exports = async (kernel) => {
           href: '/pinokio/browser?uri=https://github.com/cocktailpeanutlabs/comfyui.git',
         }, {
           text: "Install ComfyUI",
-          href: 'https://pinokio.computer/item?uri=https://github.com/cocktailpeanutlabs/comfyui',
+          href: 'https://pinokio.computer/i?uri=https://github.com/cocktailpeanutlabs/comfyui',
         }]
       }
     }, {
