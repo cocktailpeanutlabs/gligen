@@ -4,6 +4,9 @@ module.exports = async (kernel) => {
     run: [{
       method: "process.wait",
       params: {
+        on: {
+          resources: ["http://localhost:8188"]
+        },
         message: 'Gligen depends on ComfyUI. Make sure to launch ComfyUI before proceeding.',
         menu: [{
           text: "Open ComfyUI",
