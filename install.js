@@ -19,7 +19,7 @@ module.exports = async (kernel) => {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/mut-ex/gligen-gui app",
+          "git clone https://github.com/cocktailpeanut/gligen-gui app",
         ]
       }
     }, {
